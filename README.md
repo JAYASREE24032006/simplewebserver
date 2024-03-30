@@ -1,8 +1,8 @@
 # EX01 Developing a Simple Webserver
-## Date:
+## Date: 29.03.24
 
 ## AIM:
-To develop a simple webserver to serve html pages.
+To develop a simple web server 
 
 ## DESIGN STEPS:
 ### Step 1: 
@@ -21,78 +21,121 @@ Serving the HTML pages.
 Testing the webserver.
 
 ## PROGRAM:
-from http.server import HTTPServer,BaseHTTPRequestHandler
-
-content='''
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .row1
+        {
+            background-color: burlywood;
+            place-items: center;
+            height: 60px;
+            font-family: Verdana;
+            display: flex;
+        }
+        i
+        {
+            color: black
+        }
+        a
+        {
+            color:black;
+            text-decoration: none;
+            padding: 10px;
+        }
+        a:hover
+        {
+            color:gray
+        }
+        i:hover
+        {
+            color: gray;
+        }
+        .search
+        {
+            
+            height: 40px;
+            width=30px;
+            border-radius: 10px; 
+            outline: none;
+            border: none;
+            
+        }
+    </style>
 </head>
 <body>
-<html>
-<head>
-<title>Software Companies</title>
-</head>
-<body bgcolor="lavender">
-<h1 style="font-family:'Courier New', Courier, monospace ; font-size: 50px;"align="center">Top Software Companies</h1>
-<table border="5" bordercolor='black' cellspacing="4" cellpadding="6" height="30" width="50"align="center">
-<caption style="font-family:'Courier New', Courier, monospace ;font-size: 15px;"align="center"><b>
-    Top Five Revenue Generating Software Companies</b></caption><br>
-<tr><br>
-<th>Rank</th>
-<th>Company</th>
-<th>Revenue</th>
-</tr>
-<tr>
-<td align="center">1</td>
-<td align="center">Alphabet</td>
-<td align="center">$282B</td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="center">Microsoft</td>
-<td align="center">$211B</td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="center">Amazon</td>
-<td align="center">$478B</td>
-</tr>
-<tr>
-<td align="center">4</td>
-<td align="center">IBM</td>
-<td align="center">$60B</td>
-</tr>
-<tr>
-<td align="center">5</td>
-<td align="center">Oracle</td>
-<td align="center">$49B</td>
-</tr>
+    <div class="row1">
+       <div style="width: 35%;" class="i">
+            <a href=""><i class="bi bi-whatsapp" style="color: black;font-size: 25px;border: 5px;"></i></a>
+            <a href=""><i class="bi bi-facebook" style="color: black;font-size: 25px;border: 5px;"></i></a>
+            <a href=""><i class="bi bi-instagram" style="color: black;font-size: 25px;border: 5px;"></i></a>
+            <a href=""><i class="bi bi-envelope" style="color: black;font-size: 25px;border: 5px;"></i></a>
+            <a href=""><i class="bi bi-twitter" style="color: black;font-size: 25px;border: 5px;"></i></a>
+        </div>
+        <div style="width:45%;" >
+            <a href="">Alumini</a><i class="bi bi-three-dots-vertical"></i>
+            <a href="">Events</a><i class="bi bi-three-dots-vertical"></i>
+            <a href="">career</a><i class="bi bi-three-dots-vertical"></i>
+            <a href="">Login</a><i class="bi bi-three-dots-vertical"></i>
+            <a href="">SEC Portal</a>
+        </div>
+        <div style="width: 10%;">
+            <input type="text" name="Search" placeholder="Search" class="search p-2" >
+        </div>
+    </div style=border>
+    <div class="row p-3">
+        <div class="col-4">
+            <img src="c:\Users\91893\Downloads\HTML\saveetha.png"style width="100%">
+        </div>
+        <div class="col-8">
+            <a href="">Home</a><i class="bi bi-three-dots-vertical"></i>
+            <a href="">About</a><i class="bi bi-three-dots-vertical"></i>
+            <a href="">Departments</a><i class="bi bi-three-dots-vertical"></i>
+            <a href="">Life at SEC</a><i class="bi bi-three-dots-vertical"></i>
+            <a href="">Placements</a><i class="bi bi-three-dots-vertical"></i>
+            <a href="">Admissions</a>
+        </div>
+    <div>
+        <div style="width: 100%;height=60%;">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="ex11.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="ex22.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="ex33.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+    </div>
 </body>
 </html>
-</body>
-</html>
 
-'''
 
-class MyServer(BaseHTTPRequestHandler):
-    def do_GET(self):
-        print("Get request received...")
-        self.send_response(200) 
-        self.send_header("content-type", "text/html")       
-        self.end_headers()
-        self.wfile.write(content.encode())
 
-print("This is my webserver") 
-server_address =('',8000)
-httpd = HTTPServer(server_address,MyServer)
-httpd.serve_forever()
+
 
 ## OUTPUT:
-![image](https://github.com/JAYASREE24032006/simplewebserver/assets/144360800/dfeb6a50-f1c4-46ae-89f0-234dcca9c33d)
+
+![WhatsApp Image 2024-03-30 at 08 44 47_80ebbced](https://github.com/JAYASREE24032006/simplewebserver/assets/144360800/9ae4348f-c98d-44e2-8966-867b0ee152f2)
 
 
 
