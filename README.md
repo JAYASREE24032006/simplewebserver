@@ -36,10 +36,11 @@ content='''
 <head>
 <title>Software Companies</title>
 </head>
-<body bgcolor="white">
+<body bgcolor="lavender">
 <h1 style="font-family:'Courier New', Courier, monospace ; font-size: 50px;"align="center">Top Software Companies</h1>
 <table border="5" bordercolor='black' cellspacing="4" cellpadding="6" height="30" width="50"align="center">
-<caption style="font-family:'Courier New', Courier, monospace ;font-size: 15px;"align="center"><b>Top Five Revenue Generating Software Companies</b></caption><br>
+<caption style="font-family:'Courier New', Courier, monospace ;font-size: 15px;"align="center"><b>
+    Top Five Revenue Generating Software Companies</b></caption><br>
 <tr><br>
 <th>Rank</th>
 <th>Company</th>
@@ -89,19 +90,6 @@ print("This is my webserver")
 server_address =('',8000)
 httpd = HTTPServer(server_address,MyServer)
 httpd.serve_forever()
-class MyServer(BaseHTTPRequestHandler):
-    def do_GET(self):
-        print("Get request received...")
-        self.send_response(200) 
-        self.send_header("content-type", "text/html")       
-        self.end_headers()
-        self.wfile.write(content.encode())
-
-print("This is my webserver") 
-server_address =('',8000)
-httpd = HTTPServer(server_address,MyServer)
-httpd.serve_forever()
-
 
 ## OUTPUT:
 ![image](https://github.com/JAYASREE24032006/simplewebserver/assets/144360800/dfeb6a50-f1c4-46ae-89f0-234dcca9c33d)
