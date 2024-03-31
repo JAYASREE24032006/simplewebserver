@@ -36,7 +36,7 @@ Testing the webserver.
         {
             background-color: burlywood;
             place-items: center;
-            height: 60px;
+            height: 60px; 
             font-family: Verdana;
             display: flex;
         }
