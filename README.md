@@ -130,15 +130,10 @@ Testing the webserver.
 </body>
 </html> 
 
-
-
-
-
-## OUTPUT:
+        
+## OUTPUT :
 
 ![WhatsApp Image 2024-03-30 at 08 44 47_80ebbced](https://github.com/JAYASREE24032006/simplewebserver/assets/144360800/9ae4348f-c98d-44e2-8966-867b0ee152f2)
-
-
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
