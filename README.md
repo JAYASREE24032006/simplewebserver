@@ -1,5 +1,5 @@
-# EX01 Developing a Simple Webserver
-## Date: 29.03.24
+# EX01 - Developing a Simple Webserver
+## Date: 05.03.2024
 
 ## AIM:
 To develop a simple web server 
@@ -22,6 +22,7 @@ Testing the webserver.
 
 ## PROGRAM:
 
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,7 +129,8 @@ Testing the webserver.
             </div>
     </div>
 </body>
-</html> 
+</html>
+```
 
         
 ## OUTPUT :
